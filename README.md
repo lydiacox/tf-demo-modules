@@ -14,7 +14,6 @@ terraform destroy
 ```
 
 ## Inputs
-
 | Name | Description | Type |
 | ---- | ----------- | ---- |
 | project | The project in which to create the resources. | `string` |
@@ -31,3 +30,11 @@ terraform destroy
 
 
 ## Outputs
+| Name | Description |
+| ---- | ----------- |
+| network_id | Network ID |
+| network_self_link | Network self link. |
+| subnetwork_id | Subnetwork ID. |
+| subnetwork_self_link | Subnetwork self link. |
+| compute_instance_ids | List of compute instance IDs. |
+| compute_instance_self_links | List of compute instance self links. |
