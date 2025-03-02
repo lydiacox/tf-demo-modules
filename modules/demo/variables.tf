@@ -38,6 +38,11 @@ variable "region" {
   description = "The region the resources should be created in."
 }
 
+variable "sa_roles" {
+  type = list(string)
+  description = "A list of the roles to assign to the GCE service account."
+}
+
 variable "services" {
   type = list(string)
   default = []

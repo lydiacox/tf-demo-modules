@@ -6,6 +6,10 @@ module "demo" {
     "sql-component.googleapis.com",
     "run.googleapis.com",
   ]
+  sa_roles = [
+    "roles/compute.instanceAdmin",
+    "roles/storage.admin",
+  ]
   vm_count       = 3
   name           = "programmable-mod-demo"
   ip_cidr_range  = "10.128.0.0/24"
