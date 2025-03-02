@@ -19,5 +19,5 @@ output "compute_instance_ids" {
 }
 
 output "compute_instance_self_links" {
-    value = [google_compute_instance.self.*.self_links]
+    value = [google_compute_instance.self.*.self_link]
 }
