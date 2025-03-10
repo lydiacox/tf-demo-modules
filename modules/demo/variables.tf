@@ -36,17 +36,15 @@ variable "project" {
 variable "region" {
   type    = string
   description = "The region the resources should be created in."
+  validation {
+    condition     = can(regex("^(australia-southeast1|australia-southeast2)$", var.region))
+    error_message = "Invalid region selected, only allowed regions are: `australia-southeast1`, `australia-southeast2`"
+  }
 }
 
 variable "sa_roles" {
   type = list(string)
   description = "A list of the roles to assign to the GCE service account."
-}
-
-variable "services" {
-  type = list(string)
-  default = []
-  description = "A list of Google APIs to enable in the project."
 }
 
 variable "vm_count" {
