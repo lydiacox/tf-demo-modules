@@ -23,7 +23,7 @@ terraform destroy
 | machine_type | The machine type to create. | `string` |`pd-balanced` or `pd-ssd`. | `string` |
 | name | A name to include in the resources. | `string` |
 | project | The project in which to create the resources. | `string` |
-| region | The region the resources should be created in. | `string` |
+| region | The region the resources should be created in. Select from `australia-southeast1` or `australia-southeast2` | `string` |
 | vm_count | The number of VMs to build. | `number` |
 | zone | The zone the resources should be created in. | `string` |
 
