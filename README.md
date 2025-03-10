@@ -16,6 +16,7 @@ terraform destroy
 ## Inputs
 | Name | Description | Type |
 | ---- | ----------- | ---- |
+| bk_count | The number of buckets you want to create | `number` |
 | boot_disk_size | The boot disk for the instance/s. | `number` |
 | boot_disk_type | The GCE disk type. Such as `pd-standard` | `string`|
 | image | The image from which to initialize this disk. | `string` |
@@ -24,15 +25,16 @@ terraform destroy
 | name | A name to include in the resources. | `string` |
 | project | The project in which to create the resources. | `string` |
 | region | The region the resources should be created in. Select from `australia-southeast1` or `australia-southeast2` | `string` |
-| vm_count | The number of VMs to build. | `number` |
 | zone | The zone the resources should be created in. | `string` |
 
 
 ## Outputs
 | Name | Description |
 | ---- | ----------- |
-| compute_instance_ids | List of compute instance IDs. |
-| compute_instance_self_links | List of compute instance self links. |
+| bucket_ids | List of storage bucket IDs. |
+| bucket_self_links | List of storage bucket self links. |
+| compute_instance_ids | Compute instance ID. |
+| compute_instance_self_links | Compute instance self link. |
 | network_id | Network ID |
 | network_self_link | Network self link. |
 | subnetwork_id | Subnetwork ID. |

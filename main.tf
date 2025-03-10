@@ -1,8 +1,8 @@
 module "demo" {
   source = "./modules/demo"
 
-  project = "programmable-demo-module-2025"
-  vm_count       = 3
+  project        = "programmable-demo-module-2025"
+  bk_count       = 3
   name           = "programmable-mod-demo"
   ip_cidr_range  = "10.128.0.0/24"
   machine_type   = "e2-micro"

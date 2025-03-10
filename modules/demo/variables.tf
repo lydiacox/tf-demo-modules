@@ -1,3 +1,8 @@
+variable "bk_count" {
+  type        = number
+  description = "The number of buckets you want to create."
+}
+
 variable "boot_disk_size" {
   type        = number
   description = "The boot disk for the instance/s."
@@ -45,12 +50,6 @@ variable "region" {
 variable "sa_roles" {
   type        = list(string)
   description = "A list of the roles to assign to the GCE service account."
-}
-
-variable "vm_count" {
-  type        = number
-  default     = 1
-  description = "The number of VMs to build."
 }
 
 variable "zone" {

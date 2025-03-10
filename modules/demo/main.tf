@@ -1,7 +1,5 @@
 resource "google_compute_instance" "self" {
-  count = var.vm_count
-
-  name                      = "${var.name}-${count.index}"
+  name                      = "vm-${var.name}"
   project                   = var.project
   machine_type              = var.machine_type
   zone                      = var.zone
@@ -23,4 +21,13 @@ resource "google_compute_instance" "self" {
     email  = google_service_account.self.email
     scopes = ["cloud-platform"]
   }
+}
+
+resource "google_storage_bucket" "self" {
+  count = var.bk_count
+
+  name                        = "bk-${var.name}-${count.index}"
+  location                    = var.region
+  project                     = var.project
+  uniform_bucket_level_access = true
 }
