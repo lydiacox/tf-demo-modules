@@ -3,7 +3,6 @@ module "demo" {
 
   project = "programmable-demo-module-2025"
   services = [
-    "sql-component.googleapis.com",
     "run.googleapis.com",
   ]
   sa_roles = [
