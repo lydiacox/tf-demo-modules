@@ -22,28 +22,12 @@ variable "zone" {
   default = "australia-southeast2-b"
 }
 
-variable "image" {
-  type = string
-}
-
-variable "machine_type" {
-  type = string
-}
-
-variable "name" {
-  type = string
-}
-
 variable "size" {
-  type = number
+  type    = number
   default = 10
 }
 
-variable "subnetwork" {
-  type = string
-}
-
 variable "type" {
-  type = string
+  type    = string
   default = "pd-balanced"
 }
