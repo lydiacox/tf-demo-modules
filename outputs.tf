@@ -21,3 +21,10 @@ output "subnetwork_id" {
 output "subnetwork_self_link" {
   value = google_compute_subnetwork.self.self_link
 }
+
+output "module_micro_deabian"{
+  value = module.compute_e2_micro_debian_12.compute_id
+}
+output "module_standard_centos"{
+  value = module.compute_n2_standard_9.compute_id
+}

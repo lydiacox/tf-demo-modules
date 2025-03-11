@@ -1,11 +1,11 @@
 variable "name" {
   type    = string
-  default = "programmable-demo"
+  default = "demo-module"
 }
 
 variable "project" {
   type    = string
-  default = "programmable-demo-2025"
+  default = "programmable-demo-module-2025"
 }
 
 variable "region" {
